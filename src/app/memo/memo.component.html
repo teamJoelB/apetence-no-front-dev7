@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Contenue</th>
+                <th>Date de création</th>
+                <th>Créateur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of memos">
+                <td>{{ m.id }}</td>
+                <td>{{ m.contenu }}</td>
+                <td> {{ m.dateCreation | date: 'd/M/y hh:mm a' }} </td>
+                <td> <strong>{{ m.user.login }} </strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

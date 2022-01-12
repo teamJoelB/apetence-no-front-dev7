@@ -1,0 +1,11 @@
+<h2 class="text-secondary">Add new memo</h2>
+
+<div>
+    <form #memo="ngForm" (ngSubmit)="createMemo(memo.value)" >
+        <div class="md-form">
+            <label class="grey-text" style="font-size: large;" for="contenu">Contenu du memo</label>
+            <input type="text" name="contenu" ngModel="" style="font-size: x-large;">
+        </div>
+        <button type="submit" class="btn btn-secondary btn-block">add</button>
+    </form>
+</div>
